@@ -1,0 +1,31 @@
+# Copyright (c) 2026 AMD
+# SPDX-License-Identifier: Apache-2.0
+
+description: AMD SOF SoundWire DMA node
+
+compatible: "amd,acp-sdw-dma"
+properties:
+  reg:
+    required: false
+    type: array
+    description: Register address and size of the DMA controller
+
+  interrupts:
+    required: false
+    type: array
+    description: Interrupt specifier for the DMA controller
+
+  dma-channels:
+    type: int
+    required: false
+    description: Number of DMA channels supported
+
+  dma-requests:
+    type: int
+    required: false
+    description: Number of DMA requests supported
+
+  clocks:
+    type: phandle-array
+    required: false
+    description: Clock(s) for the DMA controller
