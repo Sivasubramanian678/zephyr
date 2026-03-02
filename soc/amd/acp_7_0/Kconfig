@@ -1,0 +1,15 @@
+# Copyright (c) 2026 AMD
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_ACP_7_0
+	select XTENSA
+	select XT_INTERRUPT_LEVEL_5
+	select XT_INTERRUPT_LEVEL_3
+	select XT_INTERRUPT_LEVEL_1
+	select XT_INTERRUPT_LEVEL_4
+	select XT_WAITI_DELAY
+	select XTENSA_EXCLUSIVE
+	select AMD
+	select AMD_BINARY_BUILD
+	select XTENSA_HAL if ("$(ZEPHYR_TOOLCHAIN_VARIANT)" != "xcc" && "$(ZEPHYR_TOOLCHAIN_VARIANT)" != "xt-clang")
+	select ATOMIC_OPERATIONS_C
