@@ -1,0 +1,8 @@
+# Copyright (c) 2026 AMD
+# SPDX-License-Identifier: Apache-2.0
+
+config DAI_AMD_SDW
+	bool "AMD SoundWire DAI driver"
+		depends on ZEPHYR_NATIVE_DRIVERS
+	help
+	  Select this to enable AMD SoundWire DAI driver.
